@@ -1,12 +1,18 @@
 // Vector.h
 // Author: Trevor Newell
 // 9/1/2016
+
 #pragma once
 
-#ifndef stdafx_h_Included
-#define stdafx_h_Included
-#include "stdafx.h"
-#endif // !stdafx.h_Included
+#ifndef stdio_h_Included
+#define stdio_h_Included
+#include <stdio.h>
+#endif // !stdio.h_Included
+
+#ifndef tchar_h_Included
+#define tchar_h_Included
+#include <tchar.h>
+#endif // !tchar.h_Included
 
 #ifndef iostream_Included
 #define iostream_Included

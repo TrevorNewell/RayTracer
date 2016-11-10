@@ -4,6 +4,9 @@
 
 #pragma once
 
+#include"Point.h"
+#include"Vector.h"
+
 #ifndef stdio_h_Included
 #define stdio_h_Included
 #include <stdio.h>
@@ -24,16 +27,6 @@
 #include <ostream>
 #endif // !ostream_Included
 
-#ifndef Point_h_Included
-#define Point_h_Included
-#include"Point.h"
-#endif // !Point.h_Included
-
-#ifndef Vector_h_Included
-#define Vector_h_Included
-#include"Vector.h"
-#endif // !Vector.h_Included
-
 class Ray
 {
 	public:
@@ -41,7 +34,7 @@ class Ray
 		Ray(const Point& p, const Vector& v);     // This constructor takes a point and a vector.
 		Ray(const Point& p, const Point& p2);     // This constructor takes two points and calculates the vector based on the two.
 		Ray(const Ray& copyFrom); //copy constructor
-		Ray operator=(const Ray& copyFrom); //copy assignment
+		Ray operator=(const Ray copyFrom); //copy assignment
 		~Ray();                  // destructor
 
 		Point point;

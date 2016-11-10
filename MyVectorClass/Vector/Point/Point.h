@@ -2,6 +2,8 @@
 // Author: Trevor Newell
 // 11/6/2016
 
+#pragma once
+
 #ifndef stdio_h_Included
 #define stdio_h_Included
 #include <stdio.h>
@@ -21,8 +23,6 @@
 #define ostream_Included
 #include <ostream>
 #endif // !ostream_Included
-
-#pragma once
 
 class Point
 {

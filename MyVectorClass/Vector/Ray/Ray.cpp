@@ -4,7 +4,7 @@ using namespace std;
 
 Ray::Ray()
 {
-	point = Point::Point();
+	point = Point();
 	vector = Vector();
 }
 
@@ -26,7 +26,7 @@ Ray::Ray(const Ray& copyFrom)
 	vector = copyFrom.vector;
 }
 
-Ray Ray::operator=(const Ray& copyFrom)
+Ray Ray::operator=(const Ray copyFrom)
 {
 	return copyFrom;
 }
