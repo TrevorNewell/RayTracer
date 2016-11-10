@@ -74,7 +74,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\Point; ..\Vector;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -115,6 +116,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ray.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Point\Point.vcxproj">
+      <Project>{4b24d665-b0cb-4c6e-b7fc-7fe01f4ba49f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vector\Vector.vcxproj">
+      <Project>{4f6f1950-95ec-48cf-a7e6-30444bcc0b6c}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

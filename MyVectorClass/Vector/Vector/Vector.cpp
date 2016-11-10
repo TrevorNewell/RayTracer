@@ -1,11 +1,7 @@
 // Vector.cpp : Defines the entry point for the console application.
 // Author: Trevor Newell
 // 9/1/2016
-
-#include "stdafx.h"
 #include "Vector.h"
-#include <iostream>
-#include <ostream>
 
 using namespace std;
 
@@ -91,11 +87,19 @@ Vector Vector::operator*(const float scaleBy)
 	return m;
 }
 
+Vector Vector::CrossProduct(const Vector rightSide)
+{
+	float newX = y*rightSide.z - z*rightSide.y;
+	float newY = -1 * (x*rightSide.z - z*rightSide.x);
+	float newZ = x*rightSide.y - y*rightSide.x;
+	return Vector(newX, newY, newZ);
+}
+
 // Dot Product
 float Vector::DotProduct(const Vector rightSide)
 {
 	Vector m = Vector(*this);
-	return m.x*rightSide.x + m.y*rightSide.y + m.z*rightSide.z;
+	return x*rightSide.x + y*rightSide.y + z*rightSide.z;
 }
 
 // Length
@@ -140,38 +144,47 @@ int main()
 	a.PrintVector("Test Add (a = c + e): ");
 	cout << "\n";
 
-	// Test Subtraction
-	c.PrintVector("C: ");
-	e.PrintVector("E: ");
-	Vector s = c - e;
-	s.PrintVector("Test Sub (s = c - e): ");
-	cout << "\n";
-
-	// Test Negate
-	a.PrintVector("A: ");
-	a.Negate();
-	a.PrintVector("Test Negate (a.Negate()): ");
-	cout << "\n";
-
-	// Test Scalar Multiplication
-	v.PrintVector("V: ");
-	Vector m = v * 3;
-	m.PrintVector("Test Scalar Mult (m = v*3): ");
-	cout << "\n";
-
-	// Test Dot Product
-	a.PrintVector("A: ");
-	c.PrintVector("C: ");
-	double d = a.DotProduct(c);
-	cout << "Test Dot Product (a.DotProduct(c)): " << d << "\n";
-	cout << "\n";
-
-	// Test Length 
-	a.PrintVector("A: ");
-	double l = a.Length();
-	cout << "Test Length (a.Length()): " << l << "\n";
-	cout << "\n";
-
-	cin.ignore(); // Hold console window open to view results
-	return 0; // Close program
-}
+//	// Test Subtraction
+//	c.PrintVector("C: ");
+//	e.PrintVector("E: ");
+//	Vector s = c - e;
+//	s.PrintVector("Test Sub (s = c - e): ");
+//	cout << "\n";
+//
+//	// Test Negate
+//	a.PrintVector("A: ");
+//	a.Negate();
+//	a.PrintVector("Test Negate (a.Negate()): ");
+//	cout << "\n";
+//
+//	// Test Scalar Multiplication
+//	v.PrintVector("V: ");
+//	Vector m = v * 3;
+//	m.PrintVector("Test Scalar Mult (m = v*3): ");
+//	cout << "\n";
+//
+//	// Test Cross Product
+//	Vector left = Vector(1, 2, 3);
+//	Vector right = Vector(4, 5, 6);
+//	left.PrintVector("Left: ");
+//	right.PrintVector("Right: ");
+//	Vector cross = left.CrossProduct(right);
+//	cross.PrintVector("Test Cross Product (left x right): ");
+//	cout << "\n";
+//
+//	// Test Dot Product
+//	a.PrintVector("A: ");
+//	c.PrintVector("C: ");
+//	float d = a.DotProduct(c);
+//	cout << "Test Dot Product (a.DotProduct(c)): " << d << "\n";
+//	cout << "\n";
+//
+//	// Test Length 
+//	a.PrintVector("A: ");
+//	float l = a.Length();
+//	cout << "Test Length (a.Length()): " << l << "\n";
+//	cout << "\n";
+//
+//	cin.ignore(); // Hold console window open to view results
+//	return 0; // Close program
+//}

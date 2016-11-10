@@ -1,8 +1,4 @@
 #include "Point.h"
-#include <stdio.h>
-#include <tchar.h>
-#include <iostream>
-#include <ostream>
 
 using namespace std;
 

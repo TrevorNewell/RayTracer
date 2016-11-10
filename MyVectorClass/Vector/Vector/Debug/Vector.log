@@ -1,2 +1,2 @@
-﻿  Vector.vcxproj -> C:\Users\Trevor\Desktop\VectorStuff\RayTracer\MyVectorClass\Vector\Debug\Vector.exe
-  Vector.vcxproj -> C:\Users\Trevor\Desktop\VectorStuff\RayTracer\MyVectorClass\Vector\Debug\Vector.pdb (Full PDB)
+﻿  Vector.cpp
+c:\users\trevor\desktop\vectorstuff\raytracer\myvectorclass\vector\vector\vector.cpp(191): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?

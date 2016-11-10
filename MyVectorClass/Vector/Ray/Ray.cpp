@@ -1,25 +1,34 @@
 #include "Ray.h"
 
+using namespace std;
+
 Ray::Ray()
 {
+	point = Point::Point();
+	vector = Vector();
 }
 
-Ray::Ray(Point p, Vector v)
+Ray::Ray(const Point& p, const Vector& v)
 {
+	point = p;
+	vector = v;
 }
 
-Ray::Ray(Point p, Point p2)
+Ray::Ray(const Point& p, const Point& p2)
 {
-	// May not need
+	point = p;
+	vector = Vector(p2.x - p.x, p2.y - p.y, p2.z - p.z); // This calculates the actual length of our vector.  Based on the distance between the two points.
 }
 
-Ray::Ray(const Ray & copy_from)
+Ray::Ray(const Ray& copyFrom)
 {
+	point = copyFrom.point;
+	vector = copyFrom.vector;
 }
 
-Ray Ray::operator=(const Ray copy_from)
+Ray Ray::operator=(const Ray& copyFrom)
 {
-	return Ray();
+	return copyFrom;
 }
 
 Ray::~Ray()
@@ -28,33 +37,43 @@ Ray::~Ray()
 
 void Ray::PrintRay(char * prefixWith) const
 {
+	cout << prefixWith << "Point (X: " << point.x << " Y: " << point.y << " Z: " << point.z << "). " << "\n" << 
+			prefixWith << "Vector(X: " << vector.x << " Y : " << vector.y << " Z : " << vector.z << "). " << "\n";
 }
 
-Ray Ray::operator+(const Ray addTo)
+int main()
 {
-	return Ray();
-}
+	// Test Default Constructor
+	Ray v = Ray();
+	v.PrintRay("Initial for v: ");
 
-Ray Ray::operator-(const Ray subFrom)
-{
-	return Ray();
-}
+	v.point = Point(1, 2, 3);
+	v.vector = Vector(5, 4, 3);
 
-void Ray::Negate()
-{
-}
+	v.PrintRay("New Values for v: ");
+	cout << "\n";
 
-Ray Ray::operator*(const float scaleBy)
-{
-	return Ray();
-}
+	// Test Equals
+	Ray e = v;
+	e.PrintRay("Test Equals (e = v): ");
+	cout << "\n";
 
-float Ray::DotProduct(const Ray rightSide)
-{
-	return 0.0f;
-}
+	// Test Copy
+	e.PrintRay("E: ");
+	Ray c = Ray(e);
+	c.PrintRay("Test Copy (c = Ray(e);): ");
+	cout << "\n";
 
-float Ray::Length()
-{
-	return 0.0f;
+	// Test point vector constructor
+	v = Ray(Point(1,1,1), Vector(3,5,6));
+	v.PrintRay("Test point vector constructor: ");
+	cout << "\n";
+
+	// Test point vector constructor
+	v = Ray(Point(1, 1, 1), Point(2, 2, 2));
+	v.PrintRay("Test point point constructor: ");
+	cout << "\n";
+
+	cin.ignore(); // Hold console window open to view results
+	return 0; // Close program
 }
