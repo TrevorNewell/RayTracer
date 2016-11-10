@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  Vector.cpp
+  LINK : C:\Users\Trevor\Desktop\MyVectorClass\Vector\Debug\Vector.exe not found or not built by the last incremental link; performing full link
+  Vector.vcxproj -> C:\Users\Trevor\Desktop\MyVectorClass\Vector\Debug\Vector.exe
+  Vector.vcxproj -> C:\Users\Trevor\Desktop\MyVectorClass\Vector\Debug\Vector.pdb (Full PDB)
