@@ -11,9 +11,16 @@ using namespace std;
 
 Vector::Vector() // Constructor
 {
-	xValue = 0;
-	yValue = 0;
-	zValue = 0;
+	x = 0;
+	y = 0;
+	z = 0;
+}
+
+Vector::Vector(float xVal, float yVal, float zVal)
+{
+	x = xVal;
+	y = yVal;
+	z = zVal;
 }
 
 Vector::~Vector() // Destructor
@@ -24,9 +31,9 @@ Vector::~Vector() // Destructor
 // Constructs a new vector from an already existing Vector.
 Vector::Vector(const Vector& oldVector) 
 {
-	xValue = oldVector.xValue;
-	yValue = oldVector.yValue;
-	zValue = oldVector.zValue;
+	x = oldVector.x;
+	y = oldVector.y;
+	z = oldVector.z;
 }
 
 // Operator override for =.  Copies contents of one vector, to another.
@@ -34,9 +41,9 @@ Vector Vector::operator=(const Vector oldVector)
 {
 	Vector newVector = Vector();
 
-	newVector.xValue = oldVector.xValue;
-	newVector.yValue = oldVector.yValue;
-	newVector.zValue = oldVector.zValue;
+	newVector.x = oldVector.x;
+	newVector.y = oldVector.y;
+	newVector.z = oldVector.z;
 
 	return newVector;
 }
@@ -46,9 +53,9 @@ Vector Vector::operator+(const Vector addTo)
 {
 	Vector result = Vector();
 
-	result.xValue = xValue + addTo.xValue;
-	result.yValue = yValue + addTo.yValue;
-	result.zValue = zValue + addTo.zValue;
+	result.x = x + addTo.x;
+	result.y = y + addTo.y;
+	result.z = z + addTo.z;
 
 	return result;
 }
@@ -58,9 +65,9 @@ Vector Vector::operator-(const Vector subFrom)
 {
 	Vector result = Vector();
 
-	result.xValue = xValue - subFrom.xValue;
-	result.yValue = yValue - subFrom.yValue;
-	result.zValue = zValue - subFrom.zValue;
+	result.x = x - subFrom.x;
+	result.y = y - subFrom.y;
+	result.z = z - subFrom.z;
 
 	return result;
 }
@@ -68,39 +75,39 @@ Vector Vector::operator-(const Vector subFrom)
 // Negate
 void Vector::Negate()
 {
-	xValue = xValue * -1;
-	yValue = yValue * -1;
-	zValue = zValue * -1;
+	x = x * -1;
+	y = y * -1;
+	z = z * -1;
 }
 
 // Scalar Multiplication
-Vector Vector::operator*(const double scaleBy)
+Vector Vector::operator*(const float scaleBy)
 {
 	Vector m = Vector(*this);
-	m.xValue = m.xValue * scaleBy;
-	m.yValue = m.yValue * scaleBy;
-	m.zValue = m.zValue * scaleBy;
+	m.x = m.x * scaleBy;
+	m.y = m.y * scaleBy;
+	m.z = m.z * scaleBy;
 
 	return m;
 }
 
 // Dot Product
-double Vector::DotProduct(const Vector rightSide)
+float Vector::DotProduct(const Vector rightSide)
 {
 	Vector m = Vector(*this);
-	return m.xValue*rightSide.xValue + m.yValue*rightSide.yValue + m.zValue*rightSide.zValue;
+	return m.x*rightSide.x + m.y*rightSide.y + m.z*rightSide.z;
 }
 
 // Length
-double Vector::Length()
+float Vector::Length()
 {
 	Vector m = Vector(*this);
-	return sqrt(pow(m.xValue, 2) + pow(m.yValue, 2) + pow(m.zValue, 2));
+	return sqrt(pow(m.x, 2) + pow(m.y, 2) + pow(m.z, 2));
 }
 
 void Vector::PrintVector(char* prefixWith) const
 {
-	cout << prefixWith << " X: " << xValue << " Y: " << yValue << " Z: " << zValue << "\n";
+	cout << prefixWith << " X: " << x << " Y: " << y << " Z: " << z << "\n";
 }
 
 int main()
@@ -109,9 +116,9 @@ int main()
 	Vector v = Vector();
 	v.PrintVector("Initial for v: ");
 
-	v.xValue = 5;
-	v.yValue = 15;
-	v.zValue = 12;
+	v.x = 5;
+	v.y = 15;
+	v.z = 12;
 
 	v.PrintVector("New Values for v: ");
 

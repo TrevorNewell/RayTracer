@@ -8,13 +8,14 @@ class Vector
 {
 public:                   
 	Vector();     // constructor
+	Vector(float xVal, float yVal, float zVal);     // constructor
 	Vector(const Vector& copy_from); //copy constructor
 	Vector operator=(const Vector copy_from); //copy assignment
 	~Vector();                  // destructor
 
-	double xValue;
-	double yValue;
-	double zValue;
+	float x;
+	float y;
+	float z;
 
 	void PrintVector(char* prefixWith) const;
 
@@ -28,13 +29,13 @@ public:
 	void Negate();
 
 	// Scalar Multiplication
-	Vector operator*(const double scaleBy);
+	Vector operator*(const float scaleBy);
 
 	// Dot Product
-    double DotProduct(const Vector rightSide);
+    float DotProduct(const Vector rightSide);
 
 	// Length - Magnitude
-	double Length();
+	float Length();
 
 private:    
 };
