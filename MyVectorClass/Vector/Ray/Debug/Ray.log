@@ -574,26 +574,26 @@
    /v
    /x
    /fo
-   "C:\Users\Trevor\AppData\Local\Temp\lnk{828245C7-644E-46EB-A384-2D6AC77E28E0}.tmp"
-   "C:\Users\Trevor\AppData\Local\Temp\lnk{12285F87-299D-4AB2-9F36-ECFB662E28EC}.tmp"
+   "C:\Users\Trevor\AppData\Local\Temp\lnk{E0154E55-B563-4D18-A310-5339CA239B58}.tmp"
+   "C:\Users\Trevor\AppData\Local\Temp\lnk{EE6BDF33-769C-484A-9531-4A6D10E9F486}.tmp"
   Microsoft (R) Windows (R) Resource Compiler Version 6.3.9600.17336
   
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   
-  Creating C:\Users\Trevor\AppData\Local\Temp\lnk{828245C7-644E-46EB-A384-2D6AC77E28E0}.tmp
+  Creating C:\Users\Trevor\AppData\Local\Temp\lnk{E0154E55-B563-4D18-A310-5339CA239B58}.tmp
   
   Using codepage 1252 as default
   
-  C:\Users\Trevor\AppData\Local\Temp\lnk{12285F87-299D-4AB2-9F36-ECFB662E28EC}.tmp.
+  C:\Users\Trevor\AppData\Local\Temp\lnk{EE6BDF33-769C-484A-9531-4A6D10E9F486}.tmp.
   Writing 24:1,	lang:0x409,	size 381
   
   Invoking cvtres.exe:
    /machine:x86
    /verbose
-   /out:"C:\Users\Trevor\AppData\Local\Temp\lnk{3BC66AA1-A883-4C26-92A8-EC2D9D8112A4}.tmp"
+   /out:"C:\Users\Trevor\AppData\Local\Temp\lnk{965AC0D6-DC2E-4B39-8CB8-8C85573002FC}.tmp"
    /readonly
-   "C:\Users\Trevor\AppData\Local\Temp\lnk{828245C7-644E-46EB-A384-2D6AC77E28E0}.tmp"
+   "C:\Users\Trevor\AppData\Local\Temp\lnk{E0154E55-B563-4D18-A310-5339CA239B58}.tmp"
   Microsoft (R) Windows Resource To Object Converter Version 14.00.24210.0
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
@@ -623,4 +623,4 @@ Ray.obj : error LNK2019: unresolved external symbol "public: __thiscall Vector::
     C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\odbccp32.lib
     C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\OLDNAMES.lib
   
-C:\Users\Trevor\Desktop\VectorStuff\RayTracer\MyVectorClass\Vector\Debug\Ray.exe : fatal error LNK1120: 10 unresolved externals
+C:\Users\Trevor\Desktop\VectorStuff\NewVector\RayTracer\MyVectorClass\Vector\Point\Debug\Ray.exe : fatal error LNK1120: 10 unresolved externals

@@ -1,2 +1,4 @@
-﻿  Vector.vcxproj -> C:\Users\Trevor\Desktop\VectorStuff\RayTracer\MyVectorClass\Vector\Debug\Vector.exe
-  Vector.vcxproj -> C:\Users\Trevor\Desktop\VectorStuff\RayTracer\MyVectorClass\Vector\Debug\Vector.pdb (Full PDB)
+﻿  stdafx.cpp
+  Vector.cpp
+  Vector.vcxproj -> C:\Users\Trevor\Desktop\VectorStuff\NewVector\RayTracer\MyVectorClass\Vector\Point\Debug\Vector.exe
+  Vector.vcxproj -> C:\Users\Trevor\Desktop\VectorStuff\NewVector\RayTracer\MyVectorClass\Vector\Point\Debug\Vector.pdb (Full PDB)
